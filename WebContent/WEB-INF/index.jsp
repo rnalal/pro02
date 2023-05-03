@@ -7,6 +7,7 @@
 <title>메인 페이지</title>
 </head>
 <body>
-<h2>제작자 : ${author }</h2>
+<%@ include file="../header.jsp" %>
+<%@ include file="../footer.jsp" %>
 </body>
 </html>
