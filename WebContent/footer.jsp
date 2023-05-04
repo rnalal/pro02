@@ -2,8 +2,6 @@
     pageEncoding="UTF-8"%>
 <footer class="ft">
 	<div class="ft_wrap">
-		<p>
-		
-		</p>
+		<p style="font-weight:bold;">Copyright © 베니토 ALL RIGHTS RESERVED</p>
 	</div>
 </footer>
