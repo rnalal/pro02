@@ -15,7 +15,10 @@ public class Oracle11 {
 	final static String NOTICE_SELECT_ALL = "select * from notice";
 	final static String NOTICE_SELECT_ONE = "select * from notice where n_no=?";
 	final static String NOTICE_READNO_UPDATE = "update notice set readno=readno+1 where n_no=?";
-	final static String INSERT_NOTICE="insert into notice values (no_seq.nextval, ?, ?, ?, ?, default)";
+	final static String INSERT_NOTICE = "insert into notice values (noti_seq.nextval, ?, ?, ?, ?, default, default)";
+	final static String UPDATE_NOTICE = "update notice set title=?, content=?, file1=?, ndate=sysdate where n_no=?";
+	final static String UPDATE_NOTICE2 = "update notice set title=?, content=?, ndate=sysdate where n_no=?";
+	final static String DELETE_NOTICE = "delete from notice where n_no=?";
 	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(driver);
