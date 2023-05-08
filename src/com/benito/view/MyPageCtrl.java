@@ -48,7 +48,7 @@ public class MyPageCtrl extends HttpServlet {
 			request.setAttribute("user", user);
 			request.setAttribute("msg", msg);
 			
-			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/user/myPate.jsp");
+			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/user/myPage.jsp");
 			view.forward(request, response);
 		}
 	}
