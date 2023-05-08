@@ -2,7 +2,7 @@ package com.benito.dto;
 
 import java.util.Date;
 
-public class User1 {
+public class User {
 	private String id;
 	private String pw;
 	private String name;
@@ -13,7 +13,7 @@ public class User1 {
 	private int visited;
 	private String udate;
 	
-	public User1(){
+	public User(){
 		Date now = new Date();
 		this.udate = now.toString();
 	}

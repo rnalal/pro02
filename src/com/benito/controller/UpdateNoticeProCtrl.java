@@ -62,7 +62,7 @@ public class UpdateNoticeProCtrl extends HttpServlet {
 		if(cnt==0){ //글 수정 실패
 			String msg = "공지사항 글을 수정하지 못했습니다.";
 			request.setAttribute("msg", msg);
-			response.sendRedirect("UpdateNotice.do?idx="+noti.getN_no());
+			response.sendRedirect("UpdateNotice.do?n_no="+noti.getN_no());
 		} else { //수정이 성공하면 글 목록으로 이동
 			response.sendRedirect("NoticeList.do");
 		}

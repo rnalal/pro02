@@ -46,7 +46,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="com.benito.dto.User1" project="pro02" file="/pro02/src/com/benito/dto/User1.java" 
+  <class id="6" language="java" name="com.benito.dto.User" project="pro02" file="/pro02/src/com/benito/dto/User.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="981" y="316"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 

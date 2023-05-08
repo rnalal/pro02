@@ -15,10 +15,20 @@ public class Oracle11 {
 	final static String NOTICE_SELECT_ALL = "select * from notice";
 	final static String NOTICE_SELECT_ONE = "select * from notice where n_no=?";
 	final static String NOTICE_READNO_UPDATE = "update notice set readno=readno+1 where n_no=?";
-	final static String INSERT_NOTICE = "insert into notice values (noti_seq.nextval, ?, ?, ?, ?, default, default)";
+	final static String INSERT_NOTICE = "insert into notice values (no_seq.nextval, ?, ?, ?, ?, default, default)";
 	final static String UPDATE_NOTICE = "update notice set title=?, content=?, file1=?, ndate=sysdate where n_no=?";
 	final static String UPDATE_NOTICE2 = "update notice set title=?, content=?, ndate=sysdate where n_no=?";
 	final static String DELETE_NOTICE = "delete from notice where n_no=?";
+	
+	final static String USER_SELECT_ALL	= "select * from user order by udate desc";
+	final static String USER_LOGIN = "select * from user1 where id=?";
+	final static String USER_VISIT_COUNT = "update user1 set visited=viseite+1 where id=?";
+	final static String INSERT_USER = "insert into user1(id, pw, name, tel, addr, email) values (?,?,?,?,?,?)";
+	final static String UPDATE_USER	= "update user1 set pw=?, name=?, tel=?, addr=?, email=?, where id=?";
+	final static String UPDATE_USER2 = "update user1 set name=?, tel=?, addr=?, email=? where id=?";
+	final static String DELETE_USER = "delete from user1 where id=?";
+	
+	
 	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(driver);

@@ -25,7 +25,7 @@ public class GetNoticeListCtrl extends HttpServlet {
 		request.setAttribute("notiList", notiList);
 		
 		//디스패치로 view를 생성하여 noticeList.jsp로 요청 받은 notiList를 포워드
-		RequestDispatcher view = request.getRequestDispatcher("/notice/notiList.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/notice/notiList.jsp");
 		view.forward(request, response);
 	}
 

@@ -1,9 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <c:set var="path1" value="${pageContext.request.contextPath }" />  
+<%
+request.setCharacterEncoding("utf-8");
+response.setContentType("text/html; charset=utf-8");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +32,7 @@
 						<th><label for="title">제목</label></th>
 						<td>
 							<input type="hidden" name="author" id="author" value="${sid }">
-							<input type="hidden" name="idx" id="idx" value="${noti.idx }">
+							<input type="hidden" name="n_no" id="n_no" value="${noti.n_no }">
 							<input type="text" name="title" id="title" value="${noti.title }" maxlength="98" title="100자 내로 작성" placeholder="100자 내로 작성" class="form-control" required autofocus>
 						</td>
 					</tr>

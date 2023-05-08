@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.benito.dto.Notice;
 import com.benito.model.NoticeDAO;
+import com.benito.service.KoreanPro;
 
 @WebServlet("/GetNotice.do")
 public class GetNoticeCtrl extends HttpServlet {
@@ -22,18 +23,18 @@ public class GetNoticeCtrl extends HttpServlet {
 		NoticeDAO ndao = new NoticeDAO();
 		Notice noti = new Notice();
 		noti = ndao.getNotice(n_no);
-		String file1 = noti.getFile1().substring(5);
+		String file1 = noti.getFile1().substring(5); 
 		String filepath1 = noti.getFile1().substring(0,4);
 		
-		file1 = URLEncoder.encode(file1, "UTF-8");
+		file1 = URLEncoder.encode(file1, "UTF-8");	
 		
 		request.setAttribute("file1", file1);
 		request.setAttribute("filepath1", filepath1);
 		request.setAttribute("noti", noti);
 		
 		System.out.println();
-		RequestDispatcher view = request.getRequestDispatcher("/WEB_INF/notice/getNotice.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/notice/getNotice.jsp");
 		view.forward(request, response);
 	}
-
 }
+

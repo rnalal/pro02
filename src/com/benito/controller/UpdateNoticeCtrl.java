@@ -27,7 +27,7 @@ public class UpdateNoticeCtrl extends HttpServlet {
 		String file1 = noti.getFile1().substring(5);
 		String filepath1 = noti.getFile1().substring(0,4);
 		
-		file1 = URLEncoder.encode(file1, "UFT-8");
+		file1 = URLEncoder.encode(file1, "UTF-8");
 		
 		request.setAttribute("file1", file1);
 		request.setAttribute("filepath1", filepath1);

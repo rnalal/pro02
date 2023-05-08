@@ -3,6 +3,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="path" value="${pageContext.request.contextPath }" />
 <%
+request.setCharacterEncoding("utf-8");
+response.setContentType("text/html; charset=utf-8");
+%>
+<%
 	String sid = "";
 	if(session!=null) sid = (String) session.getAttribute("sid");
 %>
@@ -11,16 +15,16 @@
 		<nav id="tnb" class="navbar navbar-default">
 			<ul class="nav navbar-nav navbar-right" style="padding-right:40px">
 				<c:if test="${empty sid }">
-					<li><a href="">로그인</a></li>
-					<li><a href="">회원가입</a></li>
+					<li><a href="${path }/UserLogin.do">로그인</a></li>
+					<li><a href="${path }/UserTerms.do">회원가입</a></li>
 				</c:if>
 				<c:if test="${!empty sid }">
-					<li><a href="">마이페이지</a></li>
-					<li><a href="">장바구니</a></li>
-					<li><a href="">로그아웃</a></li>
+					<li><a href="${path }/MyPage.do">마이페이지</a></li>
+					<li><a href="${path }/MyBastet.do">장바구니</a></li>
+					<li><a href="${path }/UserLogout.do">로그아웃</a></li>
 				</c:if>
 				<c:if test="${sid=='young' }">
-					<li><a href="">관리자 페이지로</a></li>
+					<li><a href="${path }/Admin.do">관리자 페이지로</a></li>
 				</c:if>
 			</ul>			
 		</nav>

@@ -9,15 +9,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/InsertNotice.do")
-public class InsertNoticeCtrl extends HttpServlet {
+@WebServlet("/UserSignUp.do")
+public class UserSignUpCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String msg = "공지사항을 등록합니다.";
+		String msg = "회원 가입 페이지를 로딩합니다.";
 		request.setAttribute("msg", msg);
 		
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/notice/insertNotice.jsp");
+		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/user/signUp.jsp");
 		view.forward(request, response);
 	}
+
 }

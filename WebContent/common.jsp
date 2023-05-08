@@ -1,9 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="common_path" value="${pageContext.request.contextPath }" />
-
-<meta charset="UTF-8">
+	<%@ page language="java" contentType="text/html; charset=UTF-8"
+	    pageEncoding="UTF-8"%>
+	<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	<c:set var="common_path" value="${pageContext.request.contextPath }" />
+<%
+request.setCharacterEncoding("utf-8");
+response.setContentType("text/html; charset=utf-8");
+%>
+	
+	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -28,7 +32,7 @@
     <!-- 스타일 초기화 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
 
-    <!-- 합쳐지고 최소화된 최신 CSS -->
+	<!-- 합쳐지고 최소화된 최신 CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
 	<!-- 부가적인 테마 -->
@@ -36,3 +40,6 @@
 
 	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	
+	<!-- jquery cdn -->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
