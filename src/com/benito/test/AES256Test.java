@@ -26,5 +26,12 @@ public class AES256Test {
 		String desText = AES256.decryptAES256(encText, key);
 		System.out.println("AES256 :"+encText+", 복호화  : "+desText);
 		
+		String[] strArr = {"1234","1111","2222","3333","4444","5555",};
+		
+		for(String str: strArr){
+			String eText = AES256.encryptAES256(str, key);
+			System.out.println("AES256:"+str+", 암호화:"+eText);
+		}
+		
 	}
 }
