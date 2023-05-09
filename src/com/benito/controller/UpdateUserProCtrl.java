@@ -37,6 +37,7 @@ public class UpdateUserProCtrl extends HttpServlet {
 		String pw = request.getParameter("pw");
 		String ppw = request.getParameter("ppw");
 		
+		
 		String passwd = "";
 		if(pw!=ppw){
 			try {
