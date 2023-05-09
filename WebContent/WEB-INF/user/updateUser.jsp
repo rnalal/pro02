@@ -11,14 +11,14 @@
 .container-fluid { width:1280px; }
 .agree_fr { width: 900px; white-space:pre-wrap; margin: 10px auto; 
 padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
-.title { padding-top:36px; padding-bottom:20px; }
+.title { padding-top:50px; padding-bottom:40px; }
 </style>
 </head>
 <body>
 <%@ include file="../../header.jsp" %>
 <div class="content" style="padding-top:30px; margin-top:30px; border-top:3px solid #333; min-height:500px; ">
 	<section class="container-fluid">
-		<h2 class="title">회원가입</h2>
+		<h2 class="title">정보수정</h2>
 		<form name="frm1" id="frm1" action="${path1 }/UpdateUserPro.do" method="post">
 			<table class="table">
 				<tbody>

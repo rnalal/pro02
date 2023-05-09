@@ -31,7 +31,10 @@ response.setContentType("text/html; charset=utf-8");
     
     <!-- 스타일 초기화 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-
+    
+ 	<!-- jquery cdn -->
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    
 	<!-- 합쳐지고 최소화된 최신 CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
@@ -41,5 +44,3 @@ response.setContentType("text/html; charset=utf-8");
 	<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 	
-	<!-- jquery cdn -->
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>

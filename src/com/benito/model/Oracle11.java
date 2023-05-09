@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class Oracle11 {
 	static String driver = "oracle.jdbc.driver.OracleDriver";
 	static String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	static String user = "system";
+	static String user = "test1";
 	static String pass = "1234";
 	
 	final static String NOTICE_SELECT_ALL = "select * from notice";

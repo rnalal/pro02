@@ -51,7 +51,7 @@ public class UserJoinProCtrl extends HttpServlet {
 		UserDAO dao = new UserDAO();
 		int cnt = dao.insertUser(user);
 		if(cnt>=1){
-			response.sendRedirect("UserLogion.do");
+			response.sendRedirect("UserLogin.do");
 		} else {
 			response.sendRedirect("UserSignUp.do");
 		}
