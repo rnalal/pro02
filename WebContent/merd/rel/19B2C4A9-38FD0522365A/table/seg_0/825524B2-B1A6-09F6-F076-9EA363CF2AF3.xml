@@ -1,0 +1,137 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="825524B2-B1A6-09F6-F076-9EA363CF2AF3" schemaObject="1B918F3F-0CAA-3E6C-162E-E1438BCC1A9A" name="NOTICE">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>TEST1</sourceObjSchema>
+<sourceObjName>NOTICE</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="N_NO" id="EA3FD5C7-FFCF-5A5B-5E1D-BCD9500D273B">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>NOTICE</sourceObjSchema>
+<sourceObjName>N_NO</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TITLE" id="BB5FF3DA-548D-2611-4BA8-DD895A81F538">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>NOTICE</sourceObjSchema>
+<sourceObjName>TITLE</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CONTENT" id="05B1ABFA-78FD-3F8B-9918-844E80A237CB">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>NOTICE</sourceObjSchema>
+<sourceObjName>CONTENT</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>1000 BYTE</dataTypeSize>
+<ownDataTypeParameters>1000 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AUTHOR" id="57CA6DEA-4B03-9624-1658-CEE7BB89CD0D">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>NOTICE</sourceObjSchema>
+<sourceObjName>AUTHOR</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FILE1" id="A7328643-48AC-1BC6-4E9B-EDAED1AAFEAD">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>NOTICE</sourceObjSchema>
+<sourceObjName>FILE1</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NDATE" id="C413851A-523E-2562-62B4-220C95BFFFCB">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>NOTICE</sourceObjSchema>
+<sourceObjName>NDATE</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<defaultValue>sysdate</defaultValue>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="READNO" id="87406CDA-163A-DA8A-2C7C-43539A8EDA6A">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>NOTICE</sourceObjSchema>
+<sourceObjName>READNO</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>*</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>0</defaultValue>
+<ownDataTypeParameters>,*,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D08C5D1A-4F66-902C-5F2F-ADE218BD38FE" schemaObject="1B918F3F-0CAA-3E6C-162E-E1438BCC1A9A" name="NOTICE_PK">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>TEST1</sourceObjSchema>
+<sourceObjName>SYS_C007366</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EA3FD5C7-FFCF-5A5B-5E1D-BCD9500D273B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,66 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev11g class="oracle.dbtools.crest.model.design.storage.oracle.v11g.TableProxyOraclev11g" name="NOTICE" directorySegmentName="seg_0" id="825524B2-B1A6-09F6-F076-9EA363CF2AF3">
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<schemaObject>1B918F3F-0CAA-3E6C-162E-E1438BCC1A9A</schemaObject>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<segment>6E036166-3642-EDB1-9E3A-EB301362BB0F</segment>
+<tableSpace>EF661F58-5A51-3248-FD48-5006B7242EE0</tableSpace>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="CONTENT" id="05B1ABFA-78FD-3F8B-9918-844E80A237CB">
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AUTHOR" id="57CA6DEA-4B03-9624-1658-CEE7BB89CD0D">
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="READNO" id="87406CDA-163A-DA8A-2C7C-43539A8EDA6A">
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<defaultValue>0</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="FILE1" id="A7328643-48AC-1BC6-4E9B-EDAED1AAFEAD">
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="TITLE" id="BB5FF3DA-548D-2611-4BA8-DD895A81F538">
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NDATE" id="C413851A-523E-2562-62B4-220C95BFFFCB">
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<defaultValue>sysdate</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="N_NO" id="EA3FD5C7-FFCF-5A5B-5E1D-BCD9500D273B">
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="NOTICE_PK" id="D08C5D1A-4F66-902C-5F2F-ADE218BD38FE">
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<schemaObject>1B918F3F-0CAA-3E6C-162E-E1438BCC1A9A</schemaObject>
+<segment>4CDA6656-223A-4C14-0DE2-78DE72989639</segment>
+<tableSpace>EF661F58-5A51-3248-FD48-5006B7242EE0</tableSpace>
+<indexSegment>4CDA6656-223A-4C14-0DE2-78DE72989639</indexSegment>
+<indexSort>SORTED</indexSort>
+<usingIndex>BY INDEX NAME</usingIndex>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev11g>

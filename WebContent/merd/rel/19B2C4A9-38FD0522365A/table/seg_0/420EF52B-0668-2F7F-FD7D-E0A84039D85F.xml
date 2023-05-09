@@ -1,0 +1,158 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="420EF52B-0668-2F7F-FD7D-E0A84039D85F" schemaObject="1B918F3F-0CAA-3E6C-162E-E1438BCC1A9A" name="PAY">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>TEST1</sourceObjSchema>
+<sourceObjName>PAY</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="YN" id="D710BF57-8EAE-52BD-F772-2BCA1068CA9A">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PAY</sourceObjSchema>
+<sourceObjName>YN</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID" id="43F23A25-94B5-DCBE-CDAE-CDF1837A9E88">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PAY</sourceObjSchema>
+<sourceObjName>ID</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3D208716-BDFA-1D8C-AA9E-3BB5D07B134F" referredColumn="F4DE91A0-3112-8E4F-FBA1-CD7C802063FB"/>
+</associations>
+</Column>
+<Column name="OCODE" id="AB0462FE-6989-DDC3-E199-5A9AA0B6463F">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PAY</sourceObjSchema>
+<sourceObjName>OCODE</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3FA5A8E4-D112-056C-1640-C8D075D7F423" referredColumn="CC63930E-DD19-FEC5-A02A-A04C306B267E"/>
+</associations>
+</Column>
+<Column name="YPAY" id="12E56227-15C8-C4F3-0542-03CE4DD6A02F">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PAY</sourceObjSchema>
+<sourceObjName>YPAY</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PNUMBER" id="ED6EEA44-CB61-D1BE-A6CA-8E10F853D4E1">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PAY</sourceObjSchema>
+<sourceObjName>PNUMBER</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 BYTE</dataTypeSize>
+<ownDataTypeParameters>50 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="YPRICE" id="77C3EFDD-42EA-BBE0-D0B4-CD6AFF19DC2F">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PAY</sourceObjSchema>
+<sourceObjName>YPRICE</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 BYTE</dataTypeSize>
+<ownDataTypeParameters>20 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="YDATE" id="6FF09204-0AE9-1AF8-5F90-7ABB3DD8F55C">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PAY</sourceObjSchema>
+<sourceObjName>YDATE</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<dataTypeSize>7</dataTypeSize>
+<ownDataTypeParameters>7,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="92DF998D-3B8C-7E08-4120-8415A3E048ED" schemaObject="1B918F3F-0CAA-3E6C-162E-E1438BCC1A9A" name="PAY_PK">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>TEST1</sourceObjSchema>
+<sourceObjName>SYS_C007343</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D710BF57-8EAE-52BD-F772-2BCA1068CA9A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A8F29297-A8C2-796E-F4AF-E60B8C819504" name="PK5">
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="43F23A25-94B5-DCBE-CDAE-CDF1837A9E88"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="881915B0-D84B-8FD3-D191-55395844AF72" name="PK6">
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB0462FE-6989-DDC3-E199-5A9AA0B6463F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

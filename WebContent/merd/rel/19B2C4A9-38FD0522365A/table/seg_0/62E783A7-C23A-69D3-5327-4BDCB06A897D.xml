@@ -1,0 +1,166 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="62E783A7-C23A-69D3-5327-4BDCB06A897D" schemaObject="1B918F3F-0CAA-3E6C-162E-E1438BCC1A9A" name="PRODUCT">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>TEST1</sourceObjSchema>
+<sourceObjName>PRODUCT</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="PCODE" id="A4A9921E-2AED-C4A7-8ED8-EE1B88138BD0">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PRODUCT</sourceObjSchema>
+<sourceObjName>PCODE</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PNAME" id="817B58FB-2BED-3F1E-56DA-CCCE1E3A46C1">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PRODUCT</sourceObjSchema>
+<sourceObjName>PNAME</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 BYTE</dataTypeSize>
+<ownDataTypeParameters>100 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PSIZE" id="0F1E7C3D-7A1D-7AB4-D082-B3C217F43C0D">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PRODUCT</sourceObjSchema>
+<sourceObjName>PSIZE</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<ownDataTypeParameters>,10,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRICE" id="93F3539F-2D6A-4549-FC0C-C08758B740B9">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PRODUCT</sourceObjSchema>
+<sourceObjName>PRICE</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 BYTE</dataTypeSize>
+<ownDataTypeParameters>10 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PCONTENT" id="9981A3C9-017D-545C-6266-512AF2F89387">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PRODUCT</sourceObjSchema>
+<sourceObjName>PCONTENT</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>300 BYTE</dataTypeSize>
+<ownDataTypeParameters>300 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PCOUNT" id="1DC9E899-57FF-81A8-12DC-A63152D77517">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PRODUCT</sourceObjSchema>
+<sourceObjName>PCOUNT</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>20</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<defaultValue>1</defaultValue>
+<ownDataTypeParameters>,20,0</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PIC1" id="7A5A542E-98A6-DF4D-8814-8E2CC884367D">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PRODUCT</sourceObjSchema>
+<sourceObjName>PIC1</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PIC2" id="39DF59A0-C0F6-D424-A426-73F7CE0BF76B">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PRODUCT</sourceObjSchema>
+<sourceObjName>PIC2</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PIC3" id="5D9C32A5-7AE0-6565-0111-F8C9415F406E">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>PRODUCT</sourceObjSchema>
+<sourceObjName>PIC3</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200 BYTE</dataTypeSize>
+<ownDataTypeParameters>200 BYTE,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5912C666-0058-F61E-02C4-B7BD70ED8A9D" schemaObject="1B918F3F-0CAA-3E6C-162E-E1438BCC1A9A" name="PRODUCT_PK">
+<sourceConnName>TEST1</sourceConnName>
+<sourceObjSchema>TEST1</sourceObjSchema>
+<sourceObjName>SYS_C007334</sourceObjName>
+<createdBy>201-11</createdBy>
+<createdTime>2023-05-09 07:02:48 UTC</createdTime>
+<ownerDesignName>merd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A4A9921E-2AED-C4A7-8ED8-EE1B88138BD0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
