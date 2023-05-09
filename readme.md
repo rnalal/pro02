@@ -33,26 +33,26 @@
 
 ## 개념적 설계
 - 유스케이스 다이어그램
-![유스케이스 다이어그램](./img/uscase.png "유스케이스 다이어그램")
+![유스케이스 다이어그램](./img/uscase.PNG "유스케이스 다이어그램")
 
 <br>
 
 ## 논리적 설계
 - 논리적ERD
-![논리적ERD](./img/nerd.png "논리적 ERD")
-![논리적ERD](./img/n.png "논리적 ERD")
+![논리적ERD](./img/nerd.PNG "논리적 ERD")
+![논리적ERD](./img/n.PNG "논리적 ERD")
 
 <br>
 
 ## 물리적 설계
 -물리적ERD
-![물리적ERD](./img/merd.png "물리적 ERD")
+![물리적ERD](./img/merd.PNG "물리적 ERD")
 
 <br>
 
 ## 클래스 설계
 - 클래스 다이어그램
-![클래스 다이어그램](./img/cd.png "클래스 다이어그램")
+![클래스 다이어그램](./img/cd.PNG "클래스 다이어그램")
 
 <br>
 
@@ -66,7 +66,7 @@
 <br>
 
 # 프로젝트 구성
-![프로젝트 구성](./img/list.png "프로젝트 구성")
+![프로젝트 구성](./img/list.PNG "프로젝트 구성")
 
 
 
