@@ -54,6 +54,35 @@ public class UserDAO {
 		return cnt;
 	}
 	
+	public int loginPass(String id, String pw) throws InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeySpecException, InvalidAlgorithmParameterException, BadPaddingException, IllegalBlockSizeException{
+		int cnt = 0;	
+		try {
+			con = Oracle11.getConnection();
+			pstmt = con.prepareStatement(Oracle11.USER_LOGIN);
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			if(rs.next()){
+				qpw = AES256.decryptAES256(rs.getString("pw"), key);
+				System.out.println(qpw);
+				if(pw.equals(qpw)){
+					cnt = 1;
+				} else {
+					cnt = 0;
+				}						
+			} else {
+				cnt = 9;
+			}
+		} catch (ClassNotFoundException e) {			
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			Oracle11.close(rs, pstmt, con);
+		}
+		userVisitedCount(id);
+		return cnt;
+	}
+	
 	public int idCheck(String id){
 		int cnt = 0;		
 		try {

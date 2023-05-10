@@ -10,6 +10,7 @@ public class Product {
 	private String pic1;
 	private String pic2;
 	private String pic3;
+	private String cate;
 	public String getPcode() {
 		return pcode;
 	}
@@ -64,12 +65,18 @@ public class Product {
 	public void setPic3(String pic3) {
 		this.pic3 = pic3;
 	}
+	public String getCate() {
+		return cate;
+	}
+	public void setCate(String cate) {
+		this.cate = cate;
+	}
 	@Override
 	public String toString() {
 		return "Product [pcode=" + pcode + ", pname=" + pname + ", psize="
 				+ psize + ", price=" + price + ", pcontent=" + pcontent
 				+ ", pcount=" + pcount + ", pic1=" + pic1 + ", pic2=" + pic2
-				+ ", pic3=" + pic3 + "]";
+				+ ", pic3=" + pic3 + ", cate=" + cate + "]";
 	}
 	
 }

@@ -64,11 +64,11 @@ response.setContentType("text/html; charset=utf-8");
 			</tbody>
 		</table>
 		<div class="btn-group">
-			<a href="${path1 }/NoticeList.do" class="btn btn-primary">글 목록</a>
-			<a href="${path1 }/InsertNotice.do" class="btn btn-primary">글 등록</a>
+			<a href="${path1 }/NoticeList.do" class="btn btn-default">글 목록</a>
+			<a href="${path1 }/InsertNotice.do" class="btn btn-default">글 등록</a>
 			<%-- 로그인한 사람의 이름이나 작성자이거나 관리자와 같은 경우 편집 및 삭제 가능 --%>
-			<a href="${path1 }/UpdateNotice.do?n_no=${noti.n_no }" class="btn btn-primary">글 변경</a>
-			<a href="${path1 }/DelNotice.do?n_no=${noti.n_no }" class="btn btn-primary">글 삭제</a>
+			<a href="${path1 }/UpdateNotice.do?n_no=${noti.n_no }" class="btn btn-default">글 변경</a>
+			<a href="${path1 }/DelNotice.do?n_no=${noti.n_no }" class="btn btn-default">글 삭제</a>
 		</div>
 	</div>
 </div>

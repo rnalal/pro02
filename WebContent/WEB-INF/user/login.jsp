@@ -38,9 +38,9 @@
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input type="submit" value="로그인" class="btn btn-primary">
-							<input type="reset" value="취소" class="btn btn-primary" >
-							<a href="${path1 }/UserTerms.do" class="btn btn-primary">회원가입</a>				
+							<input type="submit" value="로그인" class="btn btn-default">
+							<input type="reset" value="취소" class="btn btn-default" >
+							<a href="${path1 }/UserTerms.do" class="btn btn-info">회원가입</a>				
 						</td>
 					</tr>
 				</tbody>

@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="path1" value="${pageContext.request.contextPath }" />  
+<c:set var="path1" value="${pageContext.request.contextPath }" /> 
+<%
+request.setCharacterEncoding("utf-8");
+response.setContentType("text/html; charset=utf-8");
+%> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +22,7 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 <%@ include file="../../header.jsp" %>
 <div class="content" style="padding-top:30px; margin-top:30px; border-top:3px solid #333; min-height:500px; ">
 	<section class="container-fluid">
-		<h2 class="title">정보수정</h2>
+		<h2 class="title">회원 정보 수정</h2>
 		<form name="frm1" id="frm1" action="${path1 }/UpdateUserPro.do" method="post">
 			<table class="table">
 				<tbody>

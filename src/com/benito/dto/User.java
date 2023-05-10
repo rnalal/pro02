@@ -14,6 +14,7 @@ public class User {
 	private String udate;
 	
 	public User(){ Date now = new Date(); this.udate = now.toString(); }
+	
 	public String getId() { return id; }
 	public void setId(String id) {this.id = id;}
 	public String getPw() {return pw;}

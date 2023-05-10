@@ -46,7 +46,7 @@ response.setContentType("text/html; charset=utf-8");
 			</tbody>
 		</table>
 		<div class="btn-group">
-			<a href="${path1 }/InsertNotice.do" class="btn btn-primary">글 등록</a>
+			<a href="${path1 }/InsertNotice.do" class="btn btn-info">글 등록</a>
 		</div>
 	</div>
 </div>

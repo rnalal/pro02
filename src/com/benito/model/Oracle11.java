@@ -20,7 +20,7 @@ public class Oracle11 {
 	final static String UPDATE_NOTICE2 = "update notice set title=?, content=?, ndate=sysdate where n_no=?";
 	final static String DELETE_NOTICE = "delete from notice where n_no=?";
 	
-	final static String USER_SELECT_ALL	= "select * from user order by udate desc";
+	final static String USER_SELECT_ALL	= "select * from user1 order by udate desc";
 	final static String USER_LOGIN = "select * from user1 where id=?";
 	final static String USER_VISIT_COUNT = "update user1 set visited=viseite+1 where id=?";
 	final static String INSERT_USER = "insert into user1(id, pw, name, tel, addr, email) values (?,?,?,?,?,?)";
@@ -28,7 +28,12 @@ public class Oracle11 {
 	final static String UPDATE_USER2 = "update user1 set name=?, tel=?, addr=?, email=? where id=?";
 	final static String DELETE_USER = "delete from user1 where id=?";
 	
-	
+	final static String PRODUCT_CATENAME_SELECT = "select * from category where cate=?";
+	final static String PRODUCT_SELECT_ALL = "select * from product";
+	final static String PRODUCT_SELECT = "select * from product where pcode=?";
+	final static String PRODUCT_CATE_SELECT = "select * from product where cate=?";
+	final static String PRODUCT_CATE_SELECT2 = "select * from product where cate like ?||'%'";
+	final static String PRODUCT_CATE_SELECT3 = "select * from product where cate like concat(?, '%')";
 	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(driver);
