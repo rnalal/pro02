@@ -26,6 +26,43 @@ public class UserDAO {
 	String key = "%03x";
 	String qpw;
 	
+	public ArrayList<User> getUserList() throws InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeySpecException, InvalidAlgorithmParameterException, BadPaddingException, IllegalBlockSizeException{
+		ArrayList<User> uList = new ArrayList<User>();
+		try {
+			con = Oracle11.getConnection();
+			pstmt = con.prepareStatement(Oracle11.USER_SELECT_ALL);
+			rs = pstmt.executeQuery();
+			while(rs.next()){
+				User user = new User();
+				user.setId(rs.getString("id"));
+				qpw = AES256.decryptAES256(rs.getString("pw"), key);
+				int k = qpw.length();	//암호 글자수 세기
+				String vpw = qpw.substring(0, 3);	//3글자만 암호를 보여주기
+				String hpw = "";
+				for(int i=0;i<k-3;i++){	//나머지는 *로 넣기
+					hpw+="*";
+				}
+				user.setPw(vpw+hpw);
+				user.setHpw(qpw);
+				user.setName(rs.getString("name"));
+				user.setTel(rs.getString("tel"));
+				user.setEmail(rs.getString("email"));
+				user.setUdate(rs.getString("udate"));
+				user.setAddr(rs.getString("addr"));
+				user.setPoint(rs.getInt("point"));
+				user.setVisited(rs.getInt("visited"));
+				uList.add(user);
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			Oracle11.close(rs, pstmt, con);
+		}
+		return uList;
+	}
+
 	public int loginCheck(String id, String pw) throws InvalidKeyException, NoSuchAlgorithmException, InvalidKeySpecException, NoSuchPaddingException, InvalidParameterSpecException, UnsupportedEncodingException, BadPaddingException, IllegalBlockSizeException, InvalidAlgorithmParameterException{
 		int cnt = 0;
 		try{
@@ -150,12 +187,13 @@ public class UserDAO {
 				user.setId(rs.getString("id"));
 				qpw = AES256.decryptAES256(rs.getString("pw"), key);
 				int k = qpw.length();	//암호 글자수 세기
-				String vpw = qpw.substring(0, 3);	//3글자만 암호를 보여주기
+				String vpw = qpw.substring(0, 3);	//3글자만 숫자로 보여주기
 				String hpw = "";
 				for(int i=0;i<k-3;i++){	//나머지는 *로 넣기
 					hpw+="*";
 				}
 				user.setPw(vpw+hpw);
+				user.setHpw(qpw);
 				user.setName(rs.getString("name"));
 				user.setTel(rs.getString("tel"));
 				user.setEmail(rs.getString("email"));
@@ -252,6 +290,7 @@ public class UserDAO {
 					hpw+="*";
 				}
 				user.setPw(vpw+hpw);
+				user.setHpw(qpw);
 				user.setName(rs.getString("name"));
 				user.setTel(rs.getString("tel"));
 				user.setEmail(rs.getString("email"));

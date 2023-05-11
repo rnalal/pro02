@@ -48,7 +48,16 @@ public class UpdateUserProCtrl extends HttpServlet {
 					| IllegalBlockSizeException e) {
 				e.printStackTrace();
 			}
-		}				
+		} else {
+			try {
+				passwd = AES256.encryptAES256(hpw, key);
+			} catch (InvalidKeyException | NoSuchAlgorithmException
+					| InvalidKeySpecException | NoSuchPaddingException
+					| InvalidParameterSpecException | BadPaddingException
+					| IllegalBlockSizeException e) {
+				e.printStackTrace();
+			}
+		}
 		user.setId(request.getParameter("id"));
 		user.setPw(passwd);
 		user.setName(request.getParameter("name"));

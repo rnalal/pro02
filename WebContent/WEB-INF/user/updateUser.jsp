@@ -40,6 +40,7 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 							<span>${user.pw }</span>
 							<input type="password" name="ppw" id="ppw" placeholder="비밀번호 입력" class="form-control" maxlength="15" value="${user.pw }" required />
 							<input type="hidden" name="pw" id="pw" value="${user.pw }" />
+							<input type="hidden" name="hpw" id="hpw" value="${user.hpw }" />
 							<p>비밀번호는 최소 8자리에서 최대 16자리까지 숫자, 영문, 특수문자 각 1개 이상 포함되어야 함</p>
 						</td>
 					</tr>
@@ -68,14 +69,14 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 							<input type="text" name="address1" id="address1" placeholder="기본 주소 입력" class="form-control" /><br>
 							<input type="text" name="address2" id="address2" placeholder="상세 주소 입력" class="form-control" /><br>
 							<input type="text" name="postcode" id="postcode" style="width:160px;float:left;margin-right:20px;" placeholder="우편번호" class="form-control">
-							<button id="post_btn" onclick="findAddr()" class="btn btn-primary">우편번호 검색</button>
+							<button id="post_btn" onclick="findAddr()" class="btn btn-default">우편번호 검색</button>
 						</td>
 					</tr>
 					<tr>
 						<td colspan="2">
-							<input type="submit" value="회원정보수정" class="btn btn-primary"/>
-							<input type="reset" value="취소" class="btn btn-primary"/>
-							<a href="${path1 }/MyPage.do" class="btn btn-primary">마이페이지로 이동</a>
+							<input type="submit" value="회원정보수정" class="btn btn-info"/>
+							<input type="reset" value="취소" class="btn btn-default"/>
+							<a href="${path1 }/MyPage.do" class="btn btn-default">마이페이지로 이동</a>
 						</td>
 					</tr>
 				</tbody>

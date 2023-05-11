@@ -39,7 +39,7 @@
 						<td>${pro.pname }(${pro.pcode })</td>
 					</tr>	
 					<tr>
-						<th>총길이</th>
+						<th>총길이(cm)</th>
 						<td>${pro.psize }</td>
 					</tr>
 					<tr>

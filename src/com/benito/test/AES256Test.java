@@ -15,7 +15,7 @@ import com.crypto.util.AES256;
 
 public class AES256Test {
 	public static void main(String[] args) throws NoSuchAlgorithmException, InvalidKeyException, InvalidKeySpecException, NoSuchPaddingException, InvalidParameterSpecException, UnsupportedEncodingException, BadPaddingException, IllegalBlockSizeException, InvalidAlgorithmParameterException {
-		String plainText = "5555";
+		String plainText = "a456789!";
 		String key = "%03x";		//16진수로 받겠다는 뜻
 		
 		System.out.println("MD5 : "+plainText+ ", 암호화 : "+AES256.md5(plainText));
@@ -26,7 +26,10 @@ public class AES256Test {
 		String desText = AES256.decryptAES256(encText, key);
 		System.out.println("AES256 :"+encText+", 복호화  : "+desText);
 		
-		String[] strArr = {"1234","1111","2222","3333","4444","5555",};
+		System.out.println("AES256 :"+encText+", 복호화  : "+desText);
+		
+		
+		String[] strArr = {"1234","1111","2222","3333","4444","5555","a123456!"};
 		
 		for(String str: strArr){
 			String eText = AES256.encryptAES256(str, key);
