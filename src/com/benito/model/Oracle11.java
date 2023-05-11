@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class Oracle11 {
 	static String driver = "oracle.jdbc.driver.OracleDriver";
 	static String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	static String user = "test1";
+	static String user = "system";
 	static String pass = "1234";
 	
 	final static String NOTICE_SELECT_ALL = "select * from notice";
@@ -22,11 +22,13 @@ public class Oracle11 {
 	
 	final static String USER_SELECT_ALL	= "select * from user1 order by udate desc";
 	final static String USER_LOGIN = "select * from user1 where id=?";
-	final static String USER_VISIT_COUNT = "update user1 set visited=viseite+1 where id=?";
+	final static String USER_VISIT_COUNT = "update user1 set visited=visited+1 where id=?";
 	final static String INSERT_USER = "insert into user1(id, pw, name, tel, addr, email) values (?,?,?,?,?,?)";
 	final static String UPDATE_USER	= "update user1 set pw=?, name=?, tel=?, addr=?, email=? where id=?";
 	final static String UPDATE_USER2 = "update user1 set name=?, tel=?, addr=?, email=? where id=?";
 	final static String DELETE_USER = "delete from user1 where id=?";
+	final static String USER_SELECT_TEL = "select tel from user1 where id=?";
+	final static String UPDATE_PW_RESET = "update user1 set pw=? where id=?";
 	
 	final static String PRODUCT_CATENAME_SELECT = "select * from category where cate=?";
 	final static String PRODUCT_SELECT_ALL = "select * from product order by cate desc";

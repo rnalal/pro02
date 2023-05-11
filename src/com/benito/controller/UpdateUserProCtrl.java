@@ -39,7 +39,7 @@ public class UpdateUserProCtrl extends HttpServlet {
 		
 		
 		String passwd = "";
-		if(pw!=ppw){
+		if(ppw!=null){
 			try {
 				passwd = AES256.encryptAES256(ppw, key);
 			} catch (InvalidKeyException | NoSuchAlgorithmException
@@ -63,7 +63,7 @@ public class UpdateUserProCtrl extends HttpServlet {
 		user.setName(request.getParameter("name"));
 		user.setEmail(request.getParameter("email"));
 		user.setTel(request.getParameter("tel"));
-		if(request.getParameter("address1")==" " || request.getParameter("address2")==" "){
+		if(request.getParameter("address1")=="" || request.getParameter("address2")==""){
 			user.setAddr(request.getParameter("addr"));
 		} else {
 			user.setAddr(request.getParameter("address1")+" "+request.getParameter("address2"));
