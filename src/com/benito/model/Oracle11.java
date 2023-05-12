@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class Oracle11 {
 	static String driver = "oracle.jdbc.driver.OracleDriver";
 	static String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	static String user = "system";
+	static String user = "test1";
 	static String pass = "1234";
 	
 	final static String NOTICE_SELECT_ALL = "select * from notice";
@@ -48,6 +48,22 @@ public class Oracle11 {
 	final static String UPDATE_PRODUCT2 = "update product set pname=?, psize=?, price=?, pcontent=?, pcount=?, pic1=?, pic2=?, pic3=? where pcode=?";
 	final static String SALES_PRODUCT = "update product set pcount=pcount-? where pcode=?";
 	final static String DELETE_PRODUCT = "delete from product where pcode=?";
+	
+	final static String BASKET_SELECT_ALL = "select * from basket order by bn desc";
+	final static String BASKET_SELECT_ALL2 = "select basket.bn as bn, basket.id as id, user1.name as name, basket.pcode as pcode, product.pname as pname, basket.bcount as bcount, product.price as price from basket, user1, product where basket.id=user1.id and basket.pcode=product.pcode";
+	final static String BASKET_SELECT_BYID = "select * from basket where id=?";
+	final static String BASKET_SELECT_BYID2 = "select basket.bn as bn, basket.id as id, user1.name as name, basket.pcode as pcode, product.pname as pname, basket.bcount as bcount, product.price as price from basket, user1, product where basket.id=user1.id and basket.pcode=product.pcode and basket.id=?";
+	final static String BASKET_SELECT_BYPRODUCT = "select * from basket where pcode=?";
+	final static String BASKET_SELECT_BYBNUM = "select * from basket where bn=?";
+	final static String INSERT_BASKET = "insert into basket values(?,?,?,?)";
+	final static String DELETE_BASKET = "delete from basket where bn=?";
+	final static String BN_GENERATOR = "select bn from (select bn from basket order by bn desc) where rownum = 1";
+	
+	final static String OCODE_GENERATOR = "select ocode from (select * from order1 order by ocode desc) where rownum = 1";
+	final static String PNUM_GENERATOR = "select yn from (select * from pay order by yn desc) where rownum = 1";
+	final static String ADD_SALES = "insert into order1 values (?,?,?,?,?,default,?,?,?,?,?)";
+	final static String ADD_PAYMENT = "insert into pay values (?,?,?,?,?,?,default)";
+	final static String BUY_TRANS_BASKET = "delete from basket where bn=?";
 	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(driver);

@@ -139,6 +139,7 @@ public class UserDAO {
 		}
 		return cnt;
 	}
+	
 	public void userVisitedCount(String id){
 		try {
 			con = Oracle11.getConnection();
@@ -211,6 +212,35 @@ public class UserDAO {
 		}
 		return user;
 	}
+	
+	public User userDetail(String id) throws InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeySpecException, InvalidAlgorithmParameterException, BadPaddingException, IllegalBlockSizeException{
+		User user = new User();
+		String wid = "";
+		try {
+			con = Oracle11.getConnection();
+			pstmt = con.prepareStatement(Oracle11.USER_LOGIN);
+			pstmt.setString(1, wid);
+			rs = pstmt.executeQuery();
+			if(rs.next()){
+				user.setPw("pw");
+				user.setName(rs.getString("name"));
+				user.setTel(rs.getString("tel"));
+				user.setEmail(rs.getString("email"));
+				user.setUdate(rs.getString("udate"));
+				user.setAddr(rs.getString("addr"));
+				user.setPoint(rs.getInt("point"));
+				user.setVisited(rs.getInt("visited"));
+			}
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			Oracle11.close(rs, pstmt, con);
+		}
+		return user;
+	}
+
 	
 	public int updateUser(User user){
 		int cnt = 0;
@@ -336,6 +366,7 @@ public class UserDAO {
 		}
 		return user;
 	}
+	
 	public int resetPassword(String id, String passwd) {
 		int cnt = 0;
 		try {

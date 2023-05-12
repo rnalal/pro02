@@ -59,7 +59,7 @@
 							<div class="btn-group">
 								<c:if test="${pro.pcount>0 && !sid.equals('young')}">
 									<a href="${path1 }/InsertBastet.do?pcode=${pro.pcode }" class="btn btn-default" role="button">장바구니</a>
-									<a href="${path1 }/InsertSales.do?pcode=${pro.pcode }" class="btn btn-default" role="button">구매</a>
+									<a href="${path1 }/AddSales.do?bn=${bas.bn }" class="btn btn-default" role="button">구매</a>
 									<a href="${path1 }/ProductList.do?cate=${pro.cate }" class="btn btn-default" role="button">목록</a>
 								</c:if>
 								<c:if test="${sid.equals('young') }">
