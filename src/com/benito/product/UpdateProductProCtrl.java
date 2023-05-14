@@ -75,7 +75,7 @@ public class UpdateProductProCtrl extends HttpServlet {
 			pro.setPsize(Integer.parseInt(multi.getParameter("psize")));
 			pro.setPcontent(multi.getParameter("pcontent"));
 			pro.setCate(multi.getParameter("cate"));
-			pro.setPcount(Integer.parseInt(multi.getParameter("pcount")));
+			pro.setAmount(Integer.parseInt(multi.getParameter("amount")));
 			pro.setPrice(multi.getParameter("price"));
 		} catch (Exception e) {
 			System.out.print("예외 발생 : " + e);

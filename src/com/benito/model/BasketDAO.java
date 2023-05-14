@@ -28,7 +28,7 @@ public class BasketDAO {
 				bas.setName(rs.getString("name"));
 				bas.setPcode(rs.getString("pcode"));
 				bas.setPname(rs.getString("pname"));
-				bas.setBcount(rs.getInt("bcount"));
+				bas.setAmount(rs.getInt("amount"));
 				bas.setPrice(rs.getInt("price"));
 				basList.add(bas);
 			}
@@ -57,7 +57,7 @@ public class BasketDAO {
 				bas.setName(rs.getString("name"));
 				bas.setPcode(rs.getString("pcode"));
 				bas.setPname(rs.getString("pname"));
-				bas.setBcount(rs.getInt("bcount"));
+				bas.setAmount(rs.getInt("amount"));
 				bas.setPrice(rs.getInt("price"));
 				basList.add(bas);
 			}
@@ -84,7 +84,7 @@ public class BasketDAO {
 				bas.setBn(rs.getString("bn"));
 				bas.setId(rs.getString("id"));
 				bas.setPcode(rs.getString("pcode"));
-				bas.setBcount(rs.getInt("bcount"));
+				bas.setAmount(rs.getInt("amount"));
 				basList.add(bas);
 			}
 		} catch (ClassNotFoundException e) {
@@ -109,7 +109,7 @@ public class BasketDAO {
 				bas.setBn(rs.getString("bn"));
 				bas.setId(rs.getString("id"));
 				bas.setPcode(rs.getString("pcode"));
-				bas.setBcount(rs.getInt("bcount"));
+				bas.setAmount(rs.getInt("amount"));
 			}
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
@@ -131,7 +131,7 @@ public class BasketDAO {
 			pstmt.setString(1, bn);
 			pstmt.setString(2, bas.getId());
 			pstmt.setString(3, bas.getPcode());
-			pstmt.setInt(4, bas.getBcount());
+			pstmt.setInt(4, bas.getAmount());
 			cnt = pstmt.executeUpdate();
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();

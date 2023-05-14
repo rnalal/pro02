@@ -6,7 +6,7 @@ public class BasketVO {
 	private String name;
 	private String pcode;
 	private String pname;
-	private int bcount;
+	private int amount;
 	private int price;
 	public String getBn() {
 		return bn;
@@ -38,11 +38,11 @@ public class BasketVO {
 	public void setPname(String pname) {
 		this.pname = pname;
 	}
-	public int getBcount() {
-		return bcount;
+	public int getAmount() {
+		return amount;
 	}
-	public void setBcount(int bcount) {
-		this.bcount = bcount;
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
 	public int getPrice() {
 		return price;
@@ -53,7 +53,9 @@ public class BasketVO {
 	@Override
 	public String toString() {
 		return "BasketVO [bn=" + bn + ", id=" + id + ", name=" + name
-				+ ", pcode=" + pcode + ", pname=" + pname + ", bcount="
-				+ bcount + ", price=" + price + "]";
+				+ ", pcode=" + pcode + ", pname=" + pname + ", amount="
+				+ amount + ", price=" + price + "]";
 	}
+
+	
 }

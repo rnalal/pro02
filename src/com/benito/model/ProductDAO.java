@@ -28,7 +28,7 @@ public class ProductDAO {
 				pro.setPsize(rs.getInt("psize"));
 				pro.setPrice(rs.getString("price"));
 				pro.setPcontent(rs.getString("pcontent"));
-				pro.setPcount(rs.getInt("pcount"));
+				pro.setAmount(rs.getInt("amount"));
 				pro.setPic1(rs.getString("pic1"));
 				pro.setPic2(rs.getString("pic2"));
 				pro.setPic3(rs.getString("pic3"));
@@ -57,7 +57,7 @@ public class ProductDAO {
 				pro.setPsize(rs.getInt("psize"));
 				pro.setPrice(rs.getString("price"));
 				pro.setPcontent(rs.getString("pcontent"));
-				pro.setPcount(rs.getInt("pcount"));
+				pro.setAmount(rs.getInt("amount"));
 				pro.setPic1(rs.getString("pic1"));
 				pro.setPic2(rs.getString("pic2"));
 				pro.setPic3(rs.getString("pic3"));
@@ -88,7 +88,7 @@ public class ProductDAO {
 				pro.setPsize(rs.getInt("psize"));
 				pro.setPrice(rs.getString("price"));
 				pro.setPcontent(rs.getString("pcontent"));
-				pro.setPcount(rs.getInt("pcount"));
+				pro.setAmount(rs.getInt("amount"));
 				pro.setPic1(rs.getString("pic1"));
 				pro.setPic2(rs.getString("pic2"));
 				pro.setPic3(rs.getString("pic3"));
@@ -119,7 +119,7 @@ public class ProductDAO {
 				pro.setPsize(rs.getInt("psize"));
 				pro.setPrice(rs.getString("price"));
 				pro.setPcontent(rs.getString("pcontent"));
-				pro.setPcount(rs.getInt("pcount"));
+				pro.setAmount(rs.getInt("amount"));
 				pro.setPic1(rs.getString("pic1"));
 				pro.setPic2(rs.getString("pic2"));
 				pro.setPic3(rs.getString("pic3"));
@@ -149,7 +149,7 @@ public class ProductDAO {
 				pro.setPsize(rs.getInt("psize"));
 				pro.setPrice(rs.getString("price"));
 				pro.setPcontent(rs.getString("pcontent"));
-				pro.setPcount(rs.getInt("pcount"));
+				pro.setAmount(rs.getInt("amount"));
 				pro.setPic1(rs.getString("pic1"));
 				pro.setPic2(rs.getString("pic2"));
 				pro.setPic3(rs.getString("pic3"));
@@ -285,7 +285,7 @@ public class ProductDAO {
 			pstmt.setInt(3, pro.getPsize());
 			pstmt.setString(4, pro.getPrice());
 			pstmt.setString(5, pro.getPcontent());
-			pstmt.setInt(6, pro.getPcount());
+			pstmt.setInt(6, pro.getAmount());
 			pstmt.setString(7, pro.getPic1());
 			pstmt.setString(8, pro.getPic2());
 			pstmt.setString(9, pro.getPic3());
@@ -303,12 +303,12 @@ public class ProductDAO {
 	}
 
 	
-	public int receiptProduct(String pcode, int pcount, int price) {
+	public int receiptProduct(String pcode, int amount, int price) {
 		int cnt = 0;
 		try {
 			con = Oracle11.getConnection();
 			pstmt = con.prepareStatement(Oracle11.RECEIPT_PRODUCT);
-			pstmt.setInt(1, pcount);
+			pstmt.setInt(1, amount);
 			pstmt.setInt(2, price);
 			pstmt.setString(3, pcode);
 			cnt = pstmt.executeUpdate();
@@ -332,7 +332,7 @@ public class ProductDAO {
 			pstmt.setInt(2, pro.getPsize());
 			pstmt.setString(3, pro.getPrice());
 			pstmt.setString(4, pro.getPcontent());
-			pstmt.setInt(5, pro.getPcount());
+			pstmt.setInt(5, pro.getAmount());
 			pstmt.setString(6, pro.getPic1());
 			pstmt.setString(7, pro.getPic2());
 			pstmt.setString(8, pro.getPic3());
@@ -367,12 +367,12 @@ public class ProductDAO {
 		return cnt;
 	}
 	
-	public int salesProduct(String pcode, int pcount) {
+	public int salesProduct(String pcode, int amount) {
 		int cnt = 0;
 		try {
 			con = Oracle11.getConnection();
 			pstmt = con.prepareStatement(Oracle11.SALES_PRODUCT);
-			pstmt.setInt(1, pcount);
+			pstmt.setInt(1, amount);
 			pstmt.setString(2, pcode);
 			cnt = pstmt.executeUpdate();
 		} catch (ClassNotFoundException e) { //오라클 JDBC 클래스가 없거나 경로가 다른 경우 발생

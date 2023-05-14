@@ -19,7 +19,7 @@ public class InsertBasketProCtrl extends HttpServlet {
 		Basket bas = new Basket();
 		bas.setPcode(request.getParameter("pcode"));
 		bas.setId(request.getParameter("id"));
-		bas.setBcount(Integer.parseInt(request.getParameter("bcount")));
+		bas.setAmount(Integer.parseInt(request.getParameter("amount")));
 		
 		BasketDAO dao = new BasketDAO();
 		int cnt = dao.insertBasket(bas);

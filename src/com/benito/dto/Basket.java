@@ -4,7 +4,7 @@ public class Basket {
 	private String bn;
 	private String id;
 	private String pcode;
-	private int bcount;
+	private int amount;
 	public String getBn() {
 		return bn;
 	}
@@ -23,17 +23,16 @@ public class Basket {
 	public void setPcode(String pcode) {
 		this.pcode = pcode;
 	}
-	public int getBcount() {
-		return bcount;
+	public int getAmount() {
+		return amount;
 	}
-	public void setBcount(int bcount) {
-		this.bcount = bcount;
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
 	@Override
 	public String toString() {
 		return "Basket [bn=" + bn + ", id=" + id + ", pcode=" + pcode
-				+ ", bcount=" + bcount + "]";
+				+ ", amount=" + amount + "]";
 	}
-	
-	
+
 }

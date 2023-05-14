@@ -17,11 +17,11 @@ public class ReceiptProductProCtrl extends HttpServlet {
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String pcode = request.getParameter("pcode");
-		int pcount = Integer.parseInt(request.getParameter("pcount"));
+		int amount = Integer.parseInt(request.getParameter("amount"));
 		int price = Integer.parseInt(request.getParameter("price"));
 		
 		ProductDAO dao = new ProductDAO();
-		int cnt = dao.receiptProduct(pcode, pcount, price);
+		int cnt = dao.receiptProduct(pcode, amount, price);
 		
 		if(cnt==0){
 			String msg = "상품을 입고하지 못했습니다.";

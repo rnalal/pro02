@@ -2,6 +2,7 @@ package com.benito.notice;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,11 +43,11 @@ public class UpdateNoticeProCtrl extends HttpServlet {
 			fileName = multi.getFilesystemName("file1"); 
 			if (fileName == null) { 
 				System.out.print("파일 업로드 실패~!");
-			}  
+			} 
 			n_no = Integer.parseInt(multi.getParameter("n_no"));
 			author = multi.getParameter("author");
 			title = multi.getParameter("title");
-			content = multi.getParameter("content");
+			content = multi.getParameter("contet");
 		} catch (Exception e) {
 			System.out.print("예외 발생 : " + e);
 		}

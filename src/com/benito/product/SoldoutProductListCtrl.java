@@ -26,7 +26,7 @@ public class SoldoutProductListCtrl extends HttpServlet {
 		if(cate==null){
 			proList = dao.getSoldoutProductList();
 			cate = "0101";
-			cateMap.put("catename", "절판");
+			cateMap.put("catename", "품절");
 		}else {
 			proList = dao.getCateProductList(cate);
 			cateMap = dao.getCategory(cate);

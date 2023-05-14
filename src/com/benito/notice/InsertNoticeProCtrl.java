@@ -69,8 +69,7 @@ public class InsertNoticeProCtrl extends HttpServlet {
 			String msg = "공지사항을 글이 등록되지 못했습니다.";
 			request.setAttribute("msg", msg);
 			
-			//디스패치로 view를 생성하여 noticeList.jsp로 요청 받은 notiList를 포워드
-			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/notice/insertNotice.jsp");
+			RequestDispatcher view = request.getRequestDispatcher("/wEB-INF/notice/insertNotice.jsp");
 			view.forward(request, response);
 		} else { //글쓰기 성공
 			response.sendRedirect("NoticeList.do");

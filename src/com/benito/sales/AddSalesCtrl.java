@@ -31,13 +31,13 @@ public class AddSalesCtrl extends HttpServlet {
 		
 		//장바구니에서 넘어온 데이터 처리
 		String bn = "";
-		int bcount = 1;
-		String pcs = request.getParameter("bcount");
+		int amount = 1;
+		String pcs = request.getParameter("amount");
 		if(request.getParameter("bn")!=null){
 			bn = request.getParameter("bn");
-			bcount = Integer.parseInt(pcs);
+			amount = Integer.parseInt(pcs);
 			request.setAttribute("bn", bn);
-			request.setAttribute("bcount", bcount);
+			request.setAttribute("amount", amount);
 		}
 		String msg = "제품을 구매합니다.";
 		ProductDAO dao = new ProductDAO();

@@ -31,16 +31,14 @@ public class UserLoginProCtrl extends HttpServlet {
 		UserDAO dao = new UserDAO();
 		int cnt = 0;
 		
-			try {
-				cnt = dao.loginCheck(id, pw);
-			} catch (InvalidKeyException | NoSuchAlgorithmException
-					| InvalidKeySpecException | NoSuchPaddingException
-					| InvalidParameterSpecException | BadPaddingException
-					| IllegalBlockSizeException
-					| InvalidAlgorithmParameterException e) {
-				e.printStackTrace();
-			}
-		
+				try {
+					cnt = dao.loginPass(id, pw);
+				} catch (InvalidKeyException | NoSuchPaddingException
+						| NoSuchAlgorithmException | InvalidKeySpecException
+						| InvalidAlgorithmParameterException
+						| BadPaddingException | IllegalBlockSizeException e) {
+					e.printStackTrace();
+				}
 				
 		HttpSession ses = request.getSession();
 		String msg = "";

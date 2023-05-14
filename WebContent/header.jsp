@@ -19,12 +19,10 @@ response.setContentType("text/html; charset=utf-8");
 					<li><a href="${path }/UserTerms.do">회원가입</a></li>
 				</c:if>
 				<c:if test="${!empty sid }">
-					<li><a href="${path }/MyPage.do">${user.name }님 마이페이지</a></li>
+					<li><a href="${path }/MyPage.do">마이페이지</a></li>
 					<li><a href="${path1 }/MyBasket.do?id=${sid }">장바구니</a></li>
+					<li><a href="${path }/MySalesList.do?id=${sid }">구매내역</a></li>
 					<li><a href="${path }/UserLogout.do">로그아웃</a></li>
-				</c:if>
-				<c:if test="${sid=='young' }">
-					<li><a href="">관리자</a></li>
 				</c:if>
 			</ul>			
 		</nav>
@@ -141,7 +139,7 @@ response.setContentType("text/html; charset=utf-8");
 									<li class="divider"></li>
 									<li><a href="${path1 }/AdminBasketList.do">장바구니 관리</a></li>
 									<li class="divider"></li>
-									<li><a href="${path1 }/AdminCarryList.do">배송 관리</a></li>
+									<li><a href="${path1 }/Survey.do">배송 관리</a></li>
 									<li class="divider"></li>
 									<li><a href="${path1 }/AdminPayList.do">결제 관리</a></li>
 								</ul>

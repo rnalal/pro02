@@ -30,7 +30,7 @@
 						<span title="${bas.pcode }">${bas.pname }</span>
 					</td>
 					<td>${bas.price }</td>
-					<td>${bas.bcount }</td>
+					<td>${bas.amount }</td>
 					<td>
 						<a href="${path1 }/AddSales.do?bn=${bas.bn }" class="btn btn-info">구매</a>
 						<a href="${path1 }/DeleteBasket.do?bn=${bas.bn }" class="btn btn-default">삭제</a>

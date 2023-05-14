@@ -6,7 +6,7 @@ public class Product {
 	private int psize;
 	private String price;
 	private String pcontent;
-	private int pcount;
+	private int amount;
 	private String pic1;
 	private String pic2;
 	private String pic3;
@@ -41,11 +41,11 @@ public class Product {
 	public void setPcontent(String pcontent) {
 		this.pcontent = pcontent;
 	}
-	public int getPcount() {
-		return pcount;
+	public int getAmount() {
+		return amount;
 	}
-	public void setPcount(int pcount) {
-		this.pcount = pcount;
+	public void setAmount(int amount) {
+		this.amount = amount;
 	}
 	public String getPic1() {
 		return pic1;
@@ -75,8 +75,9 @@ public class Product {
 	public String toString() {
 		return "Product [pcode=" + pcode + ", pname=" + pname + ", psize="
 				+ psize + ", price=" + price + ", pcontent=" + pcontent
-				+ ", pcount=" + pcount + ", pic1=" + pic1 + ", pic2=" + pic2
+				+ ", amount=" + amount + ", pic1=" + pic1 + ", pic2=" + pic2
 				+ ", pic3=" + pic3 + ", cate=" + cate + "]";
 	}
+
 	
 }
