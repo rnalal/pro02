@@ -3,7 +3,7 @@
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
   <class id="1" language="java" name="com.benito.dto.Basket" project="pro02" 
     file="/pro02/src/com/benito/dto/Basket.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="172" y="288"/>    
+    <position height="-1" width="-1" x="89" y="147"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="com.benito.dto.Latter" project="pro02" 
     file="/pro02/src/com/benito/dto/Latter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="317" y="293"/>    
+    <position height="-1" width="-1" x="91" y="523"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="com.benito.dto.Notice" project="pro02" 
     file="/pro02/src/com/benito/dto/Notice.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="465" y="304"/>    
+    <position height="-1" width="-1" x="227" y="236"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -30,7 +30,7 @@
   </class>  
   <class id="4" language="java" name="com.benito.dto.Order1" project="pro02" 
     file="/pro02/src/com/benito/dto/Order1.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="612" y="374"/>    
+    <position height="-1" width="-1" x="365" y="344"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="com.benito.dto.Pay" project="pro02" file="/pro02/src/com/benito/dto/Pay.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="768" y="331"/>    
+    <position height="-1" width="-1" x="505" y="239"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -48,7 +48,7 @@
   </class>  
   <class id="6" language="java" name="com.benito.dto.Product" project="pro02" 
     file="/pro02/src/com/benito/dto/Product.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="929" y="359"/>    
+    <position height="-1" width="-1" x="650" y="322"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -57,7 +57,34 @@
   </class>  
   <class id="7" language="java" name="com.benito.dto.User" project="pro02" file="/pro02/src/com/benito/dto/User.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1084" y="356"/>    
+    <position height="-1" width="-1" x="791" y="354"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.benito.vo.BasketVO" project="pro02" 
+    file="/pro02/src/com/benito/vo/BasketVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="928" y="322"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="com.benito.vo.CategoryVO" project="pro02" 
+    file="/pro02/src/com/benito/vo/CategoryVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1075" y="296"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="com.benito.vo.SalesVO" project="pro02" 
+    file="/pro02/src/com/benito/vo/SalesVO.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1229" y="442"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      

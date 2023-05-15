@@ -34,7 +34,7 @@ public class AddPaymentCtrl extends HttpServlet {
 		ord.setId(id);
 		ord.setPcode(pcode);
 		ord.setAmount(amount);
-		ord.setOprice(request.getParameter("payamount"));
+		ord.setPrice(request.getParameter("payamount"));
 		ord.setTel(request.getParameter("tel"));
 		ord.setAddr(request.getParameter("address1")+" "+request.getParameter("address2"));
 		ord.setOstate("배송전");

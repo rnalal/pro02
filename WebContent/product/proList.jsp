@@ -44,14 +44,14 @@ border:1px solid #e0e0f0; text-align:center; }
 							<h4 style="color:black; text-align:center;"><span class="letter"><strong>${pro.pname }</strong></span></h4>
 							<p class="comment"><span style="background-color:rgb(210, 232, 250);">${pro.pcontent }</span></p><hr>
 							<p style="color:black; text-align:center;"><strong>수량</strong> :
-								<c:if test="${pro.pcount<=0 }"><span>절판</span></c:if>
-								<c:if test="${pro.pcount>0 }">${pro.pcount }</c:if>
+								<c:if test="${pro.amount<=0 }"><span>품절</span></c:if>
+								<c:if test="${pro.amount>0 }">${pro.amount }</c:if>
 							</p>
 							<p style="color:black; text-align:center;"><strong>가격</strong> : <fmt:formatNumber value="${pro.price }" type="currency" /></p>
 						</a>
 						<div class="btn-group">
 							<div class="but">
-							<c:if test="${pro.pcount>0 && !sid.equals('young')}">
+							<c:if test="${pro.amount>0 && !sid.equals('young')}">
 									<a href="${path1 }/InsertBasket.do?pcode=${pro.pcode}" class="btn btn-default" role="button">장바구니 담기</a>
 							</c:if>
 							</div>

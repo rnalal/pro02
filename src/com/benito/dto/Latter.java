@@ -1,5 +1,7 @@
 package com.benito.dto;
 
+import java.util.Date;
+
 public class Latter {
 	private String ln;
 	private String id;
@@ -7,6 +9,12 @@ public class Latter {
 	private String ldate;
 	private String llatter;
 	private int  lstar;
+	
+	public Latter(){
+		Date now = new Date();
+		this.ldate = now.toString();
+	}
+	
 	public String getLn() {
 		return ln;
 	}

@@ -8,6 +8,7 @@ public class SalesVO {
 	private String username;
 	private int amount;
 	private int price;
+	private String odate;
 	private String ostate;
 	private String tel;
 	private String dname;
@@ -57,6 +58,12 @@ public class SalesVO {
 	}
 	public void setPrice(int price) {
 		this.price = price;
+	}
+	public String getOdate() {
+		return odate;
+	}
+	public void setOdate(String odate) {
+		this.odate = odate;
 	}
 	public String getOstate() {
 		return ostate;
@@ -110,11 +117,10 @@ public class SalesVO {
 	public String toString() {
 		return "SalesVO [ocode=" + ocode + ", id=" + id + ", pcode=" + pcode
 				+ ", pname=" + pname + ", username=" + username + ", amount="
-				+ amount + ", price=" + price + ", ostate=" + ostate + ", tel="
-				+ tel + ", dname=" + dname + ", addr=" + addr + ", dcode="
-				+ dcode + ", yn=" + yn + ", ypay=" + ypay + ", pnumber="
-				+ pnumber + "]";
+				+ amount + ", price=" + price + ", odate=" + odate
+				+ ", ostate=" + ostate + ", tel=" + tel + ", dname=" + dname
+				+ ", addr=" + addr + ", dcode=" + dcode + ", yn=" + yn
+				+ ", ypay=" + ypay + ", pnumber=" + pnumber + "]";
 	}
-	
-	
+
 }

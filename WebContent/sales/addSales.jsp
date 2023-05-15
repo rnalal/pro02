@@ -35,8 +35,8 @@
 							<input type="hidden" id="email" name="email" value="${user.email }">
 							<input type="hidden" id="utel" name="utel" value="${user.tel }">
 							<input type="hidden" id="uaddr" name="uaddr" value="${user.addr }">
-							<c:if test="${!empty bnum}">
-								<input type="hidden" id="bn" name="bn" value="${bn }">
+							<c:if test="${!empty bn}">
+								<input type="hidden" id="bn" name="bn" value="${bas.bn }">
 							</c:if>
 						</td>
 					</tr>
@@ -47,8 +47,8 @@
 						<th>상품 설명</th><td>${pro.pcontent }</td>
 					</tr>
 					<tr>
-						<th>구매 가격</th><td>${pro.price*1.4 }
-						<input type="hidden" id="price" name="price" value="${pro.price*1.4 }"></td>
+						<th>구매 가격</th><td>${pro.price }
+						<input type="hidden" id="price" name="price" value="${pro.price }"></td>
 					</tr>
 					<tr>
 						<th><label for="amount">수량</label></th>
@@ -84,7 +84,7 @@
 					</tr>
 				</tbody>
 			</table>
-			<hr>
+			<hr><br>
 			<h3>결제 정보</h3>
 			<div class="btn-group" style="margin-bottom:36px;">
 				<button type="button" id="pay" class="btn btn-info">결제하기</button>
@@ -283,7 +283,7 @@
 				// 계좌이체 결제 선택 시.
 				else if($("#ptype3:checked").val() == '계좌이체'){
 					$("#ptype").val("계좌이체");
-					$('#paycomLb').html("입금 은행 : 농협,<br> 예금주 : 더조은책방");
+					$('#paycomLb').html("입금 은행 : 국민,<br> 예금주 : 베니토");
 					$('#ptnumLb').html("계좌 번호 :<br> 217-23-25639");
 					$("#paycom").empty();
 					$("#paycom").append("<option value=''>선택안함</option>");

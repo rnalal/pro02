@@ -37,9 +37,9 @@
 						</td>
 					</tr>
 					<tr>
-						<th><label for="pcount">수량</label></th>
+						<th><label for="amount">수량</label></th>
 						<td>
-							<input type="number" name="bcount" id="bcount" value="1" min="0" max="${pro.pcount }" title="1~500" class="form-control">
+							<input type="number" name="amount" id="amount" value="1" min="0" max="${pro.amount }" title="1~500" class="form-control">
 						</td>
 					</tr>
 					<tr>

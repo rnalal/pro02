@@ -1,5 +1,7 @@
 package com.benito.dto;
 
+import java.util.Date;
+
 public class Pay {
 	private String yn;
 	private String id;
@@ -8,6 +10,11 @@ public class Pay {
 	private String pnumber;
 	private String yprice;
 	private String ydate;
+	
+	public Pay(){
+		Date now = new Date();
+		this.ydate = now.toString();
+	}
 	public String getYn() {
 		return yn;
 	}

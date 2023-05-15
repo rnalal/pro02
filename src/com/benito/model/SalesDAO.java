@@ -24,12 +24,13 @@ public class SalesDAO {
 			pstmt.setString(2, ord.getId());
 			pstmt.setString(3, ord.getPcode());
 			pstmt.setInt(4, ord.getAmount());
-			pstmt.setString(5, ord.getOprice());
-			pstmt.setString(6, ord.getOstate());
-			pstmt.setString(7, ord.getTel());
-			pstmt.setString(8, ord.getDname());
-			pstmt.setString(9, ord.getAddr());
-			pstmt.setString(10, ord.getDcode());
+			pstmt.setString(5, ord.getPrice());
+			pstmt.setString(6, ord.getOdate());
+			pstmt.setString(7, ord.getOstate());
+			pstmt.setString(8, ord.getTel());
+			pstmt.setString(9, ord.getDname());
+			pstmt.setString(10, ord.getAddr());
+			pstmt.setString(11, ord.getDcode());
 			cnt = pstmt.executeUpdate();
 			
 			pstmt = con.prepareStatement(Oracle11.ADD_PAYMENT);
@@ -39,6 +40,7 @@ public class SalesDAO {
 			pstmt.setString(4, pay.getYpay());
 			pstmt.setString(5, pay.getPnumber());
 			pstmt.setString(6, pay.getYprice());
+			pstmt.setString(7, pay.getYdate());
 			cnt = cnt + pstmt.executeUpdate();
 			
 			pstmt = con.prepareStatement(Oracle11.SALES_PRODUCT);
@@ -123,6 +125,7 @@ public class SalesDAO {
 					sale.setPcode(rs.getString("pcode"));
 					sale.setAmount(rs.getInt("amount"));
 					sale.setPrice(rs.getInt("price"));
+					sale.setOdate(rs.getString("odate"));
 					sale.setOstate(rs.getString("ostate"));
 					sale.setTel(rs.getString("tel"));
 					sale.setDname(rs.getString("dname"));
@@ -157,6 +160,7 @@ public class SalesDAO {
 					sale.setPcode(rs.getString("pcode"));
 					sale.setAmount(rs.getInt("amount"));
 					sale.setPrice(rs.getInt("price"));
+					sale.setOdate(rs.getString("odate"));
 					sale.setOstate(rs.getString("ostate"));
 					sale.setTel(rs.getString("tel"));
 					sale.setDname(rs.getString("dname"));
@@ -191,6 +195,7 @@ public class SalesDAO {
 					sale.setPcode(rs.getString("pcode"));
 					sale.setAmount(rs.getInt("amount"));
 					sale.setPrice(rs.getInt("price"));
+					sale.setOdate(rs.getString("odate"));
 					sale.setOstate(rs.getString("ostate"));
 					sale.setTel(rs.getString("tel"));
 					sale.setDname(rs.getString("dname"));
@@ -226,6 +231,7 @@ public class SalesDAO {
 					sale.setPcode(rs.getString("pcode"));
 					sale.setAmount(rs.getInt("amount"));
 					sale.setPrice(rs.getInt("price"));
+					sale.setOdate(rs.getString("odate"));
 					sale.setOstate(rs.getString("ostate"));
 					sale.setTel(rs.getString("tel"));
 					sale.setDname(rs.getString("dname"));
@@ -259,7 +265,8 @@ public class SalesDAO {
 					ord.setId(rs.getString("id"));
 					ord.setPcode(rs.getString("pcode"));
 					ord.setAmount(rs.getInt("amount"));
-					ord.setOprice(rs.getString("oprice"));
+					ord.setPrice(rs.getString("price"));
+					ord.setOdate(rs.getString("odate"));
 					ord.setOstate(rs.getString("ostate"));
 					ord.setTel(rs.getString("tel"));
 					ord.setDname(rs.getString("dname"));

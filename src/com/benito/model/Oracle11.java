@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class Oracle11 {
 	static String driver = "oracle.jdbc.driver.OracleDriver";
 	static String url = "jdbc:oracle:thin:@localhost:1521:xe";
-	static String user = "system";
+	static String user = "test1";
 	static String pass = "1234";
 	
 	final static String NOTICE_SELECT_ALL = "select * from notice";
@@ -71,7 +71,7 @@ public class Oracle11 {
 	final static String BYOCODE_PAY = "select * from pay where ocode=? order by yn desc";
 	final static String SALES_LIST = "select order1.ocode as ocode, order1.id as id, order1.pcode as pcode, order1.amount as amount, order1.price as price, order1.odate as odate, order1.ostate as ostate, order1.tel as tel, order1.dname as dname, order1.addr as addr, order1.dcode as dcode,pay.yn as yn, pay.ypay as ypay, pay.pnumber as pnumber from order1, pay where pay.ocode=order1.ocode order by order1.ocode";
 	final static String SALES_INFO = "select order1.ocode as ocode, order1.id as id, order1.pcode as pcode, order1.amount as amount, order1.price as price, order1.odate as odate, order1.ostate as ostate, order1.tel as tel, order1.dname as dname, order1.addr as addr, order1.dcode as dcode,pay.yn as yn, pay.ypay as ypay, pay.pnumber as pnumber from order1, pay where pay.ocode=order1.ocode and order1.ocode=? order by order1.ocode";
-	final static String BYID_SALES_LIST = "select order1.ocode as ocode, order1.id as id, order1.pcode as pcode, order1.amount as amount, order1.price as price, order1.odate as odate, order1.ostate as ostate, order1.tel as tel, order1.dname as dname, order1.addr as addr, order1.dcode as dcode,payment.yn as yn, pay.ypay as ypay, pay.pnumber as pnumber from order1, pay where pay.ocode=order1.ocode and order1.id=? order by order1.ocode";
+	final static String BYID_SALES_LIST = "select order1.ocode as ocode, order1.id as id, order1.pcode as pcode, order1.amount as amount, order1.price as price, order1.odate as odate, order1.ostate as ostate, order1.tel as tel, order1.dname as dname, order1.addr as addr, order1.dcode as dcode,pay.yn as yn, pay.ypay as ypay, pay.pnumber as pnumber from order1, pay where pay.ocode=order1.ocode and order1.id=? order by order1.ocode";
 	final static String BYID_GET_SALE = "select order1.ocode as ocode, order1.id as id, order1.pcode as pcode, order1.amount as amount, order1.price as price, order1.odate as odate, order1.ostate as ostate, order1.tel as tel, order1.dname as dname, order1.addr as addr, order1.dcode as dcode, pay.yn as yn, pay.ypay as ypay, pay.pnumber as pnumber from order1, pay where pay.ocode=order1.ocode and id=? and order1.ocode=?";
 	final static String UPDATE_SURVEY = "update order1 set dname=?, dcode=?, ostate=? where ocode=?";
 	final static String DELETE_BUY = "delete from order1 where ocode=?";
@@ -80,6 +80,13 @@ public class Oracle11 {
 	final static String RETURN_SALES = "update order1 set ostate='반품요청' where ocode=?";
 	final static String OK_SALES = "update order1 set ostate='구매완료' where ocode=?";
 	
+	final static String REVIEW_PRODUCT = "select * from product where pcode = (select pcode from order1 where ocode=?)";
+	final static String RCODE_GENERATOR = "select ln from (select * from latter order by ln desc) where rownum = 1";
+	final static String ADD_REVIEW = "insert into latter values (?,?,?,default,?,?)";
+	final static String PCODEBY_REVIEW = "select * from latter where ocode=(select ocode from order1 where pcode=?) order by ln desc";
+	final static String RCODEBY_REVIEW = "select * from latter where ln=?";
+	final static String ALL_REVIEW = "select * from latter order by ln desc";
+	final static String UPDATE_REVIEW = "update latter set ldate=sysdate, llatter=?, lstar=? where id=? and ln=?";
 	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(driver);

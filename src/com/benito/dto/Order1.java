@@ -7,7 +7,7 @@ public class Order1 {
 	private String id;
 	private String pcode;
 	private int amount = 1;
-	private String oprice;
+	private String price;
 	private String odate;
 	private String ostate="배송중";
 	private String tel;
@@ -52,12 +52,12 @@ public class Order1 {
 		this.amount = amount;
 	}
 
-	public String getOprice() {
-		return oprice;
+	public String getPrice() {
+		return price;
 	}
 
-	public void setOprice(String oprice) {
-		this.oprice = oprice;
+	public void setPrice(String price) {
+		this.price = price;
 	}
 
 	public String getOdate() {
@@ -111,7 +111,7 @@ public class Order1 {
 	@Override
 	public String toString() {
 		return "Order1 [ocode=" + ocode + ", id=" + id + ", pcode=" + pcode
-				+ ", amount=" + amount + ", oprice=" + oprice + ", odate="
+				+ ", amount=" + amount + ", price=" + price + ", odate="
 				+ odate + ", ostate=" + ostate + ", tel=" + tel + ", dname="
 				+ dname + ", addr=" + addr + ", dcode=" + dcode + "]";
 	}

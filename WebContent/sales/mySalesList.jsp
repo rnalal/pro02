@@ -47,6 +47,9 @@ border:1px solid #e0e0f0; text-align:center; }
 						</span>
 					</td>
 					<td>
+						<span title="구매일: ${sale.odate }" style="cursor:pointer; display:outline-block;">${sale.odate }</span>
+					</td>
+					<td>
 						<span style="display:inline-block; width:100px;" title="구매 완료된 제품은 반품이 불가능합니다.">${sale.ostate }</span> &nbsp; &nbsp; &nbsp;
 						<c:if test="${sale.ostate=='배송전' }">
 							<a href="${path1 }/CanclePay.do?ocode=${sale.ocode }" class="btn btn-default">결제 취소</a>
@@ -55,7 +58,7 @@ border:1px solid #e0e0f0; text-align:center; }
 							<a href="${path1 }/ReturnBuy.do?ocode=${sale.ocode }" class="btn btn-default">반품 요청</a>
 							<a href="${path1 }/OkBuy.do?ocode=${sale.ocode }" class="btn btn-info">구매 완료</a>
 							&nbsp; &nbsp;
-							<span style="display:inline-block; width:160px;" title="배송 코드 : ${sale.dcode }">배송사 : ${sale.dname }</span>
+							<span style="display:inline-block; width:160px;" title="배송 코드 : ${sale.dcode }" class="btn btn-default">배송사 : ${sale.dname }</span>
 						</c:if>
 					</td>
 				</tr>

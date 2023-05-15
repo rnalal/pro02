@@ -52,16 +52,18 @@
 					</tr>
 					<tr>
 						<th>남은 수량</th>
-						<td>${pro.pcount }</td>
+						<td>${pro.amount }</td>
 					</tr>
 					<tr>
 						<td colspan="2">
 							<div class="btn-group">
-								<c:if test="${pro.pcount>0 && !sid.equals('young')}">
-									<a href="${path1 }/InsertBastet.do?pcode=${pro.pcode }" class="btn btn-default" role="button">장바구니</a>
-									<a href="${path1 }/AddSales.do?bn=${bas.bn }" class="btn btn-default" role="button">구매</a>
-									<a href="${path1 }/ProductList.do?cate=${pro.cate }" class="btn btn-default" role="button">목록</a>
+							<c:if test="${pro.amount>0 && !sid.equals('young')}">
+								<c:if test="${!empty sid}">
+									<a href="${path1 }/InsertBasket.do?pcode=${pro.pcode}" class="btn btn-default" role="button">장바구니</a>
+									<a href="${path1 }/AddSales.do?pcode=${pro.pcode}&id=${sid }" class="btn btn-info" role="button">구매</a>
 								</c:if>
+								<a href="${path1 }/ProductList.do?cate=${pro.cate}" class="btn btn-default" role="button">목록</a>
+							</c:if>
 								<c:if test="${sid.equals('young') }">
 									<a href="${path1 }/ReceiptProduct.do?pcode=${pro.pcode }" class="btn btn-default" role="button">입고</a>
 									<a href="${path1 }/UpdateProduct.do?pcode=${pro.pcode }" class="btn btn-default" role="button">수정</a>

@@ -53,11 +53,11 @@
 					</tr>
 					<tr>
 						<th>현재 수량</th>
-						<td>${pro.pcount }</td>
+						<td>${pro.amount }</td>
 					</tr>
 					<tr>
-						<th><label for="pcount">입고할 수량</label></th>
-						<td><input type="number" name="pcount" id="pcount" value="1" min="1" max="500" title="1~500" class="form-control"></td>
+						<th><label for="amount">입고할 수량</label></th>
+						<td><input type="number" name="amount" id="amount" value="1" min="1" max="500" title="1~500" class="form-control"></td>
 					</tr>
 					<tr>
 						<td colspan="2">
