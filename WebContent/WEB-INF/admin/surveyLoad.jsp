@@ -76,7 +76,7 @@
 			</table>
 			<div class="btn-group">
 				<input type="submit" value="배송처리" class="btn btn-info">
-				<a href="${path1 }/AdminCancle.do?ocode=${sale.ocode} ">주문 취소 처리</a>
+				<a href="${path1 }/AdminCancle.do?ocode=${sale.ocode}" class="btn btn-default">주문 취소 처리</a>
 				<a href="javascript:history.go(-1)" class="btn btn-default">뒤로 가기</a>				
 			</div>
 		</form>

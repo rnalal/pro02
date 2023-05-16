@@ -50,6 +50,9 @@ border:1px solid #e0e0f0; text-align:center; }
 						</span>
 					</td>
 					<td>
+						<span title="구매일 : ${sale.odate }" style="cursor:pointer; display:inline-block;">${sale.odate }</span>
+					</td>
+					<td>
 						<span style="display:inline-block; width:100px;" title="판매 완료된 제품은 반품이 불가능합니다.">${sale.ostate }</span> &nbsp; &nbsp; &nbsp;
 						<c:if test="${sale.ostate=='배송전' }">
 							<a href="${path1 }/SurveyLoad.do?ocode=${sale.ocode }" class="btn btn-info">배송 처리</a>

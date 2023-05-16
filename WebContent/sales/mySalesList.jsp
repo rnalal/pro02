@@ -59,6 +59,7 @@ border:1px solid #e0e0f0; text-align:center; }
 							<a href="${path1 }/OkBuy.do?ocode=${sale.ocode }" class="btn btn-info">구매 완료</a>
 							&nbsp; &nbsp;
 							<span style="display:inline-block; width:160px;" title="배송 코드 : ${sale.dcode }" class="btn btn-default">배송사 : ${sale.dname }</span>
+							<a href="${path1 }/AddResultUserReview.do?ocode=${sale.ocode }" class="btn btn-default">구매 후기 작성</a>
 						</c:if>
 					</td>
 				</tr>

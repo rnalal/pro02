@@ -26,7 +26,7 @@ public class AddPaymentCtrl extends HttpServlet {
 		String bn = request.getParameter("bn");
 		String cate = request.getParameter("cate");
 		
-		Pay pay = new Pay();
+		Pay pay1 = new Pay();
 		Order1 ord = new Order1();
 		SalesDAO dao = new SalesDAO();
 		
@@ -41,14 +41,14 @@ public class AddPaymentCtrl extends HttpServlet {
 		ord.setDname("");
 		ord.setDcode("");
 		
-		pay.setYn(dao.getPnumGenerator());
-		pay.setId(request.getParameter("id"));
-		pay.setOcode(ord.getOcode());
-		pay.setYpay(request.getParameter("ypay"));
-		pay.setPnumber(request.getParameter("pnumber"));
-		pay.setYprice(request.getParameter("payamount"));
+		pay1.setYn(dao.getPnumGenerator());
+		pay1.setId(request.getParameter("id"));
+		pay1.setOcode(ord.getOcode());
+		pay1.setYpay(request.getParameter("ypay"));
+		pay1.setPnumber(request.getParameter("pnumber"));
+		pay1.setYprice(request.getParameter("payamount"));
 		
-		int cnt = dao.addSales(ord, pay, bn);
+		int cnt = dao.addSales(ord, pay1, bn);
 		if(cnt>=3){
 			System.out.println("트랜잭션 처리 성공");
 			response.sendRedirect("ProductList.do?cate="+cate);

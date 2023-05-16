@@ -16,7 +16,7 @@ response.setContentType("text/html; charset=utf-8");
     <meta name="description" content="Benito는 가디건, 블라우스, 슬랙스 등 다양한 옷을 판매하고 있는 쇼핑몰입니다.">
     <meta name="author" content="jy">
 
-    <link rel="shortcut icon" href="${common_path }/img/favicon/ico">
+    <link rel="shortcut icon" href="${common_path }/img_1/logo1.png">
 
     <meta name="og:site_name" content="Benito">
     <meta name="og:title" content="Benito">

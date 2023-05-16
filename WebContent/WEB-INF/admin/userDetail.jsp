@@ -20,20 +20,16 @@ padding: 24px; border:2px solid #eee; height:600px; overflow-y:auto; }
 <%@ include file="../../header.jsp" %>
 <div class="content" style="padding-top:30px; margin-top:30px; border-top:3px solid #333; min-height:500px; ">
 	<section class="container-fluid">
-		<h2 class="title">회원정보 상세보기</h2>
+		<h2 class="title">${user.name } 회원정보 상세보기</h2>
 		<table class="table">
 			<tbody>
 				<tr>
 					<th>아이디</th>
-					<td>
-						${user.id }	
-					</td>
+					<td>${user.id }</td>
 				</tr>
 				<tr>
 					<th>비밀번호</th>
-					<td>
-						${user.pw }
-					</td>
+					<td>${user.pw }</td>
 				</tr>
 				<tr>
 					<th>회원이름</th>

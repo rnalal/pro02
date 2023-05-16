@@ -25,7 +25,9 @@ public class UserDetailCtrl extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String wid = request.getParameter("id");
+		HttpSession ses = request.getSession();
+		String wid = (String) ses.getAttribute("id");
+
 		UserDAO dao = new UserDAO();
 		User user = new User();
 		String msg = "";
@@ -37,12 +39,18 @@ public class UserDetailCtrl extends HttpServlet {
 					| BadPaddingException | IllegalBlockSizeException e) {
 				e.printStackTrace();
 			}
-	msg = "회원 정보를 로딩하였습니다.";
-		request.setAttribute("user", user);
-		request.setAttribute("msg", msg);
-		
-		RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/admin/userDetail.jsp");
-		view.forward(request, response);
+		if(user==null){
+			ses.invalidate();
+			msg = "현재 로그인이 되어 있지 않습니다. 로그인 하시기 바랍니다.";
+			response.sendRedirect("UserLogin.do?msg="+msg);
+		} else {
+			msg = "현재 본인 정보를 로딩하였습니다.";
+			request.setAttribute("user", user);
+			request.setAttribute("msg", msg);
+			
+			RequestDispatcher view = request.getRequestDispatcher("/WEB-INF/admin/userDetail.jsp");
+			view.forward(request, response);
+		}
 	}
-}
 
+}

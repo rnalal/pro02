@@ -215,14 +215,23 @@ public class UserDAO {
 	
 	public User userDetail(String id) throws InvalidKeyException, NoSuchPaddingException, NoSuchAlgorithmException, InvalidKeySpecException, InvalidAlgorithmParameterException, BadPaddingException, IllegalBlockSizeException{
 		User user = new User();
-		String wid = "";
+		String wid="";
 		try {
 			con = Oracle11.getConnection();
 			pstmt = con.prepareStatement(Oracle11.USER_LOGIN);
 			pstmt.setString(1, wid);
 			rs = pstmt.executeQuery();
 			if(rs.next()){
-				user.setPw("pw");
+				user.setId(rs.getString("wid"));
+				qpw = AES256.decryptAES256(rs.getString("pw"), key);
+				int k = qpw.length();	//암호 글자수 세기
+				String vpw = qpw.substring(0, 3);	//3글자만 숫자로 보여주기
+				String hpw = "";
+				for(int i=0;i<k-3;i++){	//나머지는 *로 넣기
+					hpw+="*";
+				}
+				user.setPw(vpw+hpw);
+				user.setHpw(qpw);
 				user.setName(rs.getString("name"));
 				user.setTel(rs.getString("tel"));
 				user.setEmail(rs.getString("email"));

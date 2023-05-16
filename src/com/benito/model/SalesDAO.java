@@ -15,32 +15,31 @@ public class SalesDAO {
 	private PreparedStatement pstmt = null;
 	private ResultSet rs = null;
 	
-	public int addSales(Order1 ord, Pay pay, String bn){
+	public int addSales(Order1 ord, Pay pay1, String bn){
 		int cnt = 0;		
 		try {
 			con = Oracle11.getConnection();
 			con.setAutoCommit(false);
+			pstmt = con.prepareStatement(Oracle11.ADD_SALES);
 			pstmt.setString(1, ord.getOcode());
 			pstmt.setString(2, ord.getId());
 			pstmt.setString(3, ord.getPcode());
 			pstmt.setInt(4, ord.getAmount());
 			pstmt.setString(5, ord.getPrice());
-			pstmt.setString(6, ord.getOdate());
-			pstmt.setString(7, ord.getOstate());
-			pstmt.setString(8, ord.getTel());
-			pstmt.setString(9, ord.getDname());
-			pstmt.setString(10, ord.getAddr());
-			pstmt.setString(11, ord.getDcode());
+			pstmt.setString(6, ord.getOstate());
+			pstmt.setString(7, ord.getTel());
+			pstmt.setString(8, ord.getDname());
+			pstmt.setString(9, ord.getAddr());
+			pstmt.setString(10, ord.getDcode());
 			cnt = pstmt.executeUpdate();
 			
 			pstmt = con.prepareStatement(Oracle11.ADD_PAYMENT);
-			pstmt.setString(1, pay.getYn());
-			pstmt.setString(2, pay.getId());
-			pstmt.setString(3, pay.getOcode());
-			pstmt.setString(4, pay.getYpay());
-			pstmt.setString(5, pay.getPnumber());
-			pstmt.setString(6, pay.getYprice());
-			pstmt.setString(7, pay.getYdate());
+			pstmt.setString(1, pay1.getYn());
+			pstmt.setString(2, pay1.getId());
+			pstmt.setString(3, pay1.getOcode());
+			pstmt.setString(4, pay1.getYpay());
+			pstmt.setString(5, pay1.getPnumber());
+			pstmt.setString(6, pay1.getYprice());
 			cnt = cnt + pstmt.executeUpdate();
 			
 			pstmt = con.prepareStatement(Oracle11.SALES_PRODUCT);
@@ -221,7 +220,7 @@ public class SalesDAO {
 			SalesVO sale = new SalesVO();
 			try {
 				con = Oracle11.getConnection();
-				pstmt = con.prepareStatement(Oracle11.BYID_SALES_LIST);
+				pstmt = con.prepareStatement(Oracle11.BYID_GET_SALE);
 				pstmt.setString(1, id);
 				pstmt.setString(2, ocode);
 				rs = pstmt.executeQuery();
