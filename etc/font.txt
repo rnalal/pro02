@@ -1,0 +1,14 @@
+
+https://benito.co.kr/index.html
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,700;1,400;1,700&family=Jua&family=Nanum+Pen+Script&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+
+
+font-family: 'Carlito', sans-serif;
+font-family: 'Jua', sans-serif;
+font-family: 'Nanum Pen Script', cursive;
+font-family: 'Noto Sans KR', sans-serif;
